@@ -26,6 +26,9 @@ public class EditorTool
             
             GameObject.Find("Canvas/Text (TMP)").GetComponent<TextMeshProUGUI>().text = "URP";
 
+            GameObject.Find("GPUGraph").GetComponent<GPUGraph>().material = 
+                AssetDatabase.LoadAssetAtPath<Material>("Assets/Point/Point URP GPU.mat");
+
             EditorUtility.DisplayDialog("提示", "切换到自定义渲染管线", "确定");
         }
         else
@@ -36,6 +39,9 @@ public class EditorTool
                 = AssetDatabase.LoadAssetAtPath<Material>("Assets/Point/Point Surface.mat");
 
             GameObject.Find("Canvas/Text (TMP)").GetComponent<TextMeshProUGUI>().text = "built-in RP";
+
+            GameObject.Find("GPUGraph").GetComponent<GPUGraph>().material = 
+                AssetDatabase.LoadAssetAtPath<Material>("Assets/Point/Point Surface GPU.mat");
 
             EditorUtility.DisplayDialog("提示", "切换到默认渲染管线", "确定");
         }
