@@ -287,7 +287,7 @@ MonoBehaviour:
   computeShader: {fileID: 7200000, guid: 89f965a63ba1cf241943d01fdd86f4ed, type: 3}
   material: {fileID: 2100000, guid: e586d3f6a2a539846b6dfb3c6acd1699, type: 2}
   mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  resolution: 200
+  resolution: 1000
   function: 4
   transitionMode: 1
   functionDuration: 1
@@ -801,7 +801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1544344317
 MonoBehaviour:
   m_ObjectHideFlags: 0

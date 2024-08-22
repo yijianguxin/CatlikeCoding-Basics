@@ -17,6 +17,18 @@ float3 Wave(float u, float v, float t)
     return p;
 }
 
+float3 Torus(float u, float v, float t)
+{
+    float r1 = 0.7 + 0.1 * sin(PI * (6 * u + 0.5 * t));
+    float r2 = 0.15 + 0.05 * sin(PI * (8 * u + 4 * v + 2 * t));
+    float s = r1 + r2 * cos(PI * v);
+    float3 p;
+    p.x = s * sin(PI * u);
+    p.y = r2 * sin(PI * v);
+    p.z = s * cos(PI * u);
+    return p;
+}
+
 float2 GetUV(uint3 id)
 {
     return (id.xy + 0.5) * _Step - 1.0;
