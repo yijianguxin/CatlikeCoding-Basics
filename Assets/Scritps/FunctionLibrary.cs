@@ -10,10 +10,9 @@ public static class FunctionLibrary
 
     public static Function[] functions = { Wave, MultiWave, Ripple, Sphere, Torus };
 
-    public static FunctionName GetNextFunctionName(FunctionName name)
-    {
-        return (int)name < functions.Length - 1 ? name + 1 : 0;
-    }
+    public static int FunctionCount => functions.Length;
+
+    public static FunctionName GetNextFunctionName(FunctionName name) => (int)name < functions.Length - 1 ? name + 1 : 0;
 
     public static FunctionName GetRandomFunctionNameOtherThan(FunctionName name)
     {
@@ -21,10 +20,7 @@ public static class FunctionLibrary
         return choice == name ? 0 : choice;
     }
 
-    public static Function GetFunction(FunctionName name)
-    {
-        return functions[(int)name];
-    }
+    public static Function GetFunction(FunctionName name) => functions[(int)name];
 
     public static Vector3 Morph(float u, float v, float t, Function from, Function to, float progress)
     {
